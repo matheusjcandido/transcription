@@ -36,11 +36,6 @@ idioma = st.selectbox(
     index=0
 )
 
-# Verificar se a chave API está configurada
-if not api_key:
-    st.warning("⚠️ Você precisa configurar uma chave API da OpenAI para usar este aplicativo.")
-    st.info("💡 A chave API pode ser configurada via variável de ambiente ou inserida no campo acima.")
-    st.stop()
 
 # Quando o usuário clicar no botão de transcrição
 if st.button("Transcrever") and uploaded_file is not None:
@@ -90,11 +85,10 @@ if st.button("Transcrever") and uploaded_file is not None:
 st.markdown("---")
 st.markdown("""
 ### Como usar:
-1. Insira sua chave API da OpenAI
-2. Faça upload de um arquivo de áudio
-3. Selecione o idioma do áudio
-4. Clique em "Transcrever"
-5. Baixe o resultado como arquivo TXT
+1. Faça upload de um arquivo de áudio
+2. Selecione o idioma do áudio
+3. Clique em "Transcrever"
+4. Baixe o resultado como arquivo TXT
 
 ### Observações:
 - Formatos suportados: MP3, WAV, M4A, OGG
